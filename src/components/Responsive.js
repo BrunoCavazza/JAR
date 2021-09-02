@@ -1,4 +1,6 @@
 import { useMediaQuery } from 'react-responsive'
+import Desk from '../AppD'
+import Mob from '../AppM'
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 })
@@ -19,10 +21,21 @@ const Default = ({ children }) => {
 
 const Example = () => (
   <div>
-    <Desktop>Desktop or laptop</Desktop>
-    <Tablet>Tablet</Tablet>
-    <Mobile>Mobile</Mobile>
-    <Default>Not mobile (desktop or laptop or tablet)</Default>
+    <Desktop>
+    <Desk />
+    </Desktop>
+
+    <Tablet>
+    <Desk /> 
+    </Tablet>
+
+    <Mobile>
+    <Mob /> 
+    </Mobile>
+
+    <Default>
+    <Desk /> 
+    </Default>
   </div>
 )
 
